@@ -1,0 +1,136 @@
+:root {
+  --bg-color: #0f0f0f;
+  --container-bg: #1a1a1a;
+  --text-primary: #f1f1f1;
+  --text-accent: #ff0080;
+  --clock-bg: #000;
+  --clock-text: #00f7ff;
+  --shadow-color: #9d00ff55;
+}
+
+body {
+	font-family: "Segoe UI", sans-serif;
+	background-color: var(--bg-color);
+	color: var(--text-primary);
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+	background-color: var(--container-bg);
+	padding: 40px;
+	border-radius: 20px;
+	box-shadow: 0 0 30px var(--shadow-color);
+	text-align: center;
+	width: 350px;
+}
+
+h1 {
+	color: var(--text-accent);
+	margin-bottom: 20px;
+	text-shadow: 0 0 10px var(--text-accent);
+}
+
+#clock {
+	font-size: 3rem;
+	font-weight: bold;
+	color: var(--clock-text);
+	background-color: var(--clock-bg);
+	padding: 20px 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px var(--clock-text);
+	margin-bottom: 10px;
+}
+
+#date {
+	margin-bottom: 30px;
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+.controls {
+	margin-bottom: 30px;
+}
+
+.controls button,
+.controls select,
+.cronometro button {
+	cursor: pointer;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 8px;
+	margin: 5px;
+	font-weight: 600;
+	transition: background-color 0.3s;
+}
+
+.controls button:hover,
+.controls select:hover,
+.cronometro button:hover {
+	background-color: var(--text-accent);
+	color: var(--clock-bg);
+}
+
+.cronometro h2 {
+	margin-bottom: 10px;
+	color: var(--text-accent);
+}
+
+#timer {
+	font-size: 2.2rem;
+	margin-bottom: 15px;
+	color: var(--clock-text);
+	background-color: var(--clock-bg);
+	padding: 15px 30px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px var(--clock-text);
+}
+
+/* Tema Claro */
+body.light {
+  --bg-color: #f5f5f5;
+  --container-bg: #fff;
+  --text-primary: #333;
+  --text-accent: #6c63ff;
+  --clock-bg: #e0e0e0;
+  --clock-text: #6c63ff;
+  --shadow-color: #6c63ff55;
+}
+
+/* Tema Soft */
+body[data-theme='soft'] {
+  --bg-color: #f5f5f5;
+  --container-bg: #fff;
+  --text-primary: #333333;
+  --text-accent: #6c63ff;
+  --clock-bg: #e0e0e0;
+  --clock-text: #6c63ff;
+  --shadow-color: #6c63ff55;
+}
+
+/* Tema Retro */
+body[data-theme='retro'] {
+  --bg-color: #2c003e;
+  --container-bg: #4a007b;
+  --text-primary: #fff689;
+  --text-accent: #ff3cac;
+  --clock-bg: #27003a;
+  --clock-text: #62d2a2;
+  --shadow-color: #ff3cac55;
+}
+
+/* Tema Terrosos Naturais */
+body[data-theme='terra'] {
+  --bg-color: #3e2723;
+  --container-bg: #d7ccc8;
+  --text-primary: #6d4c41; 
+  --text-accent: #c68c53; 
+  --clock-bg: #fff8e1;
+  --clock-text: #4e342e; 
+  --shadow-color: #c68c5355; 
+}
+
