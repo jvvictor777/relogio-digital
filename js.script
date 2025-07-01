@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 // Atualiza o relógio
 function atualizarRelogio() {
   const agora = new Date();
