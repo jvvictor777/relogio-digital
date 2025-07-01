@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Atualiza o relógio
   function atualizarRelogio() {
     const agora = new Date();
-
     const horas = String(agora.getHours()).padStart(2, '0');
     const minutos = String(agora.getMinutes()).padStart(2, '0');
     const segundos = String(agora.getSeconds()).padStart(2, '0');
-
     const diasSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
     const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 
@@ -22,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(atualizarRelogio, 1000);
   atualizarRelogio();
 
-  // Tema
   const body = document.body;
   const btnToggle = document.getElementById('toggle-theme');
   const selectTheme = document.getElementById('select-theme');
@@ -52,13 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function carregarPreferencias() {
     const temaModo = localStorage.getItem('temaModo');
     const temaPaleta = localStorage.getItem('temaPaleta');
-
-    if (temaModo === 'light') {
-      body.classList.add('light');
-    } else {
-      body.classList.remove('light');
-    }
-
+    if (temaModo === 'light') body.classList.add('light');
     aplicarTema(temaPaleta || 'neon');
   }
 
@@ -100,9 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const h = Math.floor(tempo / 3600);
     const m = Math.floor((tempo % 3600) / 60);
     const s = tempo % 60;
-
     timerDisplay.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
   }
 
   atualizarCronometro();
 });
+
